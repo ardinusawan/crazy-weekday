@@ -18,13 +18,13 @@ defmodule WordsTest do
     assert Words.count("one of each") == expected
   end
 
-  # @tag :pending
+  @tag :pending
   test "count multiple occurrences" do
     expected = %{"one" => 1, "fish" => 4, "two" => 1, "red" => 1, "blue" => 1}
     assert Words.count("one fish two fish red fish blue fish") == expected
   end
 
-  # @tag :pending
+  @tag :pending
   test "ignore punctuation" do
     expected = %{"car" => 1, "carpet" => 1, "as" => 1, "java" => 1, "javascript" => 1}
     assert Words.count("car : carpet as java : javascript!!&@$%^&") == expected
