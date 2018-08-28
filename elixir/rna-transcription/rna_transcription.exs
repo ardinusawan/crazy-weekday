@@ -9,8 +9,8 @@ defmodule RNATranscription do
   """
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
-    mapping = %{'A'=>'U', 'C'=>'G', 'T'=>'A', 'G'=>'C'}
-    translate = fn x -> List.first mapping[[x]] end
+    mapping = %{?A => ?U, ?C => ?G, ?T => ?A, ?G => ?C}
+    translate = fn x -> mapping[x] end
     for char <- dna, do: translate.(char)
   end
 
