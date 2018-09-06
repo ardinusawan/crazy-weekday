@@ -1,5 +1,6 @@
 .vscode/
 go/.idea/
+./idea/
 
 # Golang
 # Binaries for programs and plugins
