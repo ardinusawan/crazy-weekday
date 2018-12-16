@@ -2,24 +2,25 @@ package raindrops
 
 import (
 	"strconv"
-	"strings"
 )
 
+//Convert a number to a string, the contents of which depend on the number's factors
 func Convert(input int) (string) {
-	var result []string
+	
+	var result string
 	if input % 3 == 0 {
-		result = append(result, "Pling")
+		result += "Pling"
 	}
 	if input % 5 == 0{
-		result = append(result, "Plang")
+		result += "Plang"
+
 	}
 	if input % 7 == 0 {
-		result = append(result, "Plong")
+		result += "Plong"
+
 	}
 	if len(result) == 0 {
-		result = append(result, strconv.Itoa(input))
+		result += strconv.Itoa(input)
 	}
-	justString := strings.Join(result, "")
-	return justString
-	
+	return result	
 }
