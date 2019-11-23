@@ -16,3 +16,5 @@ go/.idea/
 *.out
 /.idea/
 /exercism.iml
+
+node_modules
